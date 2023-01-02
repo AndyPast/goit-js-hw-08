@@ -17,6 +17,7 @@ function onFormSubmit(evt) {
   evt.preventDefault();
   localStorage.removeItem(STORAGE_KEY);
   refs.form.reset();
+  console.log(STORAGE_KEY);
 }
 
 function onFormInput() {
@@ -29,7 +30,7 @@ function onFormInput() {
 
 function populateForm() {
   const savedMessage = JSON.parse(localStorage.getItem(STORAGE_KEY));
-
+  console.log(savedMessage);
   if (!savedMessage) {
     return;
   }
